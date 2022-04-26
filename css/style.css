@@ -14,13 +14,14 @@
 body{
     font-family: 'Outfit', sans-serif;
     background-color: var(--Very-dark-blue-bg);
-padding: 20px;
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+    padding: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
 }
 .card{
+
     padding:17px;
    width: 305px;
    border-radius: 15px;
@@ -28,17 +29,59 @@ align-items: center;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   
 }
+.main-image {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 
-.img{
+.image-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: var(--Cyan);
+    border-radius: 10px;
+  }
+  
+  .view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    width: 300px;
-}
+    display: none;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .image-container:hover .overlay + .view {
+    display: block;
+  }
 
 h1{
     color: var(--White);
     font-weight: 400;
     font-size: 1.3rem;
    padding:15px 0 ; 
+}
+h1:hover{
+    color: var(--Cyan);
 }
 .desc{
     color: var(--Soft-blue);
@@ -49,6 +92,15 @@ h1{
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    
+}
+.icons p{
+    display: flex;
+    align-content: center;
+    font-size: 15px;
+}
+.eth{
+    color: var(--Cyan);
 }
 
 .avatar{
@@ -57,7 +109,26 @@ h1{
     border: 1px solid var(--White);
     width:10%;
 }
+hr{
+    margin:0px 0 10px 0;
+    border: 0.001px solid var(--Soft-blue)
+}
 p{
+   
     font-size: 18px;
+    color: var(--Soft-blue);
+}
+.create{
+    padding-left: 13px;
+    font-weight:300;
+}
+span{
+        color: var(--White);
+
+}
+.created-by{
+   display: flex;
+align-items: center;
+
 }
 
